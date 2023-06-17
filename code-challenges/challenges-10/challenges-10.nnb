@@ -24,21 +24,9 @@
         {
             "language": "javascript",
             "source": [
-                "\nfunction birthdayCakeCandles(candles) {\n    // Write your code here\n    let max=candles[0];\n    let maxHight=0;\n    for(let i = 1 ; i <candles.length;i++ ){\n        if(max < candles[i]){\n            max=candles[i];\n        }\n    }\n    for(let i = 0 ; i <candles.length;i++ ){\n        if( candles[i] == max){\n            maxHight+=1;\n        }\n    }\n    return maxHight;\n}\nconsole.log(birthdayCakeCandles(candles));"
+                "\nfunction birthdayCakeCandles(candles) {\n    // Write your code here\n    let max=candles[0];\n    let maxHight=0;\n    for(let i = 1 ; i <candles.length;i++ ){\n        if(max < candles[i]){\n            max=candles[i];\n        }\n    }\n    for(let i = 0 ; i <candles.length;i++ ){\n        if( candles[i] == max){\n            maxHight+=1;\n        }\n    }\n    return maxHight;\n}\n"
             ],
-            "outputs": [
-                {
-                    "items": [
-                        {
-                            "mime": "application/vnd.code.notebook.stdout",
-                            "value": [
-                                "2",
-                                ""
-                            ]
-                        }
-                    ]
-                }
-            ]
+            "outputs": []
         },
         {
             "language": "markdown",
