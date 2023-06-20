@@ -135,19 +135,16 @@ function gradesAvg(arr) {
     
         arr.map((ele) => {
             let obj ={
-            firstName: 'Fred',
-            lastName: 'Sagar',
-            gradsList: [20,10,18,11,2,20,3,10],
-            avg: 11.75
+            firstName: ele.firstName,
+            lastName: ele.lastName,
+            gradsList: ele.gradsList,
+            avg: 0
         };
-        obj.firstName=ele.firstName;
-        obj.lastName=ele.lastName;
-        obj.gradsList=ele.gradsList;
-        let sum=0;
+        
         ele.gradsList.map((n)=>{
-            sum+=n;
+            obj.avg+=n;
         });
-        obj.avg=(sum/8);
+        obj.avg/=8
         ans.push(obj);
     });
     return ans;
@@ -225,27 +222,20 @@ function gradesAvg(arr) {
 
 function studentsResult(arr) {
     // write your code here
-    let ans=[];
+    let ans = [];
     
-        arr.map((ele) => {
-            let obj ={
-            firstName: 'Fred',
-            lastName: 'Sagar',
-            avg: 11.75,
-            result: 'Failed'
+    arr.map((ele) => {
+        let obj = {
+            firstName: ele.firstName,
+            lastName: ele.lastName,
+            gradsList: ele.gradsList,
+            avg: ele.avg,
+            result: ele.avg < 50 ? 'Failed' : 'Passed'
         };
-        obj.firstName=ele.firstName;
-        obj.lastName=ele.lastName;
-        obj.gradsList=ele.gradsList;
-        obj.avg=ele.avg;
-        if(ele.avg<50){
-            obj.result='Failed';
-        }
-        else{
-            obj.result='Passed';
-        }
+        
         ans.push(obj);
     });
+    
     return ans;
 }
 // -------------------------------------------------------------------------------------------------------
