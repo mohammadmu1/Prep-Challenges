@@ -144,7 +144,7 @@ function gradesAvg(arr) {
         ele.gradsList.map((n)=>{
             obj.avg+=n;
         });
-        obj.avg/=8
+        obj.avg/=ele.gradsList.length
         ans.push(obj);
     });
     return ans;
