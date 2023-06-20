@@ -135,19 +135,16 @@ function gradesAvg(arr) {
     
         arr.map((ele) => {
             let obj ={
-            firstName: 'Fred',
-            lastName: 'Sagar',
-            gradsList: [20,10,18,11,2,20,3,10],
-            avg: 11.75
+            firstName: ele.firstName,
+            lastName: ele.lastName,
+            gradsList: ele.gradsList,
+            avg: 0
         };
-        obj.firstName=ele.firstName;
-        obj.lastName=ele.lastName;
-        obj.gradsList=ele.gradsList;
-        let sum=0;
+        
         ele.gradsList.map((n)=>{
-            sum+=n;
+            obj.avg+=n;
         });
-        obj.avg=(sum/8);
+        obj.avg/=8
         ans.push(obj);
     });
     return ans;
