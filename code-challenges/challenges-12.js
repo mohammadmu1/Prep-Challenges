@@ -78,13 +78,6 @@ const oddFiltration = (arr) => {
 const cvsFiltration = (arr) => {
     // write your code here
     let ans=[];
-            class newCVS{
-                constructor(fullName){
-                    this.fullName=fullName;
-                    this.tech="JS";
-                    ans.push(this);
-                }
-            };
             let cvs = arr.filter((value) => value.tech == "JS" && value.yearsOfExperience > 4);
             
             for (let i = 0; i < cvs.length; i++) {
@@ -99,8 +92,11 @@ const cvsFiltration = (arr) => {
                 else {
                     fullN = cvs[i].firstName + ' ' + cvs[i].LastName;
                 }
+                ans.push({
+                    fullName : fullN,
+                    tech: "JS"
+                })
                 
-                let obj = new newCVS(fullN);
             }
             
             return ans;
