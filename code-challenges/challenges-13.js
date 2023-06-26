@@ -41,7 +41,7 @@
 const objectCounter = (obj) => {
     // write your code here
     //return obj.length
-    let l=arr.reduce((acc,curr)=>{
+    let l=obj.reduce((acc)=>{
         return acc+1;
     },0)
 
@@ -65,14 +65,13 @@ return l;
 // ------------------------
 
 const stringReverse = (str) => {
-    // write your code here
+    
+     // write your code here
     let words = str.split(' ');
     let rev = words.reduce((accumulator, currentValue) => {
     return currentValue + ' ' + accumulator;
     }, '');
     return rev.trim();
-
-
 }
 // -------------------------------------------------------------------------------------------------------
 
