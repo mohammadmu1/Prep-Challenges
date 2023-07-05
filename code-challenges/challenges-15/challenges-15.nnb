@@ -24,7 +24,7 @@
         {
             "language": "javascript",
             "source": [
-                "function equalizeArray(arr) {\n    // Write your code here\n    let cumSum =new Array(100).fill(0);//use comultive sum\n    let max = 0;\n    let l = arr.length\n    for(let i = 0 ;i<l;i++){\n        ++cumSum[arr[i]];\n        if(cumSum[arr[i]]>max){\n            max=cumSum[arr[i]];\n            \n        }\n    }\n    return l-max;\n}"
+                "function equalizeArray(arr) {\n    // Write your code here\n    let cumSum =new Array(101).fill(0);//use comultive sum\n    let max = 0;\n    let l = arr.length\n    for(let i = 0 ;i<l;i++){\n        ++cumSum[arr[i]];\n        if(cumSum[arr[i]]>max){\n            max=cumSum[arr[i]];\n            \n        }\n    }\n    return l-max;\n}"
             ],
             "outputs": []
         },
