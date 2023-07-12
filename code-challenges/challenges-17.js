@@ -17,23 +17,28 @@
 const recursionPattern = (int1, int2) => {
     // write your code here
     let ans=[];
-    function rec1(x, y){
-        if(x<0) ans.push(x);
-                else{
-                    ans.push(x);
-                    rec1(x-y,y);
-                }
+    function rec(x,y,bool){
+      if(bool==true){
+        if(x==int1){
+          ans.push(x);
         }
-        rec1(int1,int2);
-    function rec2(x, y){
-            if(x===int1) ans.push(x);
-                    else{
-                        ans.push(x);
-                        rec2(x+y,y);
-                    }
-            }
-            rec2(ans[ans.length-1]+int2,int2);
-        return ans;
+        else{
+          ans.push(x);
+          rec(x+y,y,true);
+        }
+      }
+      else{
+        if(x<0){
+          rec(x,y,true)
+        }
+        else{
+          ans.push(x);
+          rec(x-y,y,false);
+        }
+      }
+    }
+    rec(int1,int2,false);
+    return ans;
 }
 // -------------------------------------------------------------------------------------------------------
 
