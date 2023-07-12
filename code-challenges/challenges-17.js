@@ -27,7 +27,7 @@ const recursionPattern = (int1, int2) => {
           rec(x+y,y,true);
         }
       }
-      if(bool==false){
+      else{
         if(x<0){
           rec(x,y,true)
         }
